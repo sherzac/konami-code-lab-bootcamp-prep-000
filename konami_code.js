@@ -13,56 +13,24 @@ const codes = [
 
 /*function init() {
   // your code here
-}
+}*/
 
-
-
-let index = 0;
+const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
 function init() {
-	document.body.addEventListener('keydown', function event(e)
-	{
-	  let key = e.key;
-	  
-	  if (key === codes[index]) {
-	    index++;
-	  }
-	  
-	  if (index === codes.length) {
-	    alert("Congratulations, you entered the Konami code!");
-	    
-	    index = 0;
-	  } else {
-	    index = 0;
-	  }
-	  
-	  })}
-	  
-*/	  
-	  let counter=0;
-function init() {
-	
-  
-  
-  
-document.body.addEventListener('keydown', (e) =>{	
-onKeyDownHandler(e)
-})
+  var index = 0
+  document.body.addEventListener('keydown', function(e) {
+    const key = parseInt(e.detail || e.which)
 
-}
-  function onKeyDownHandler(e) {
-	  
-	  console.log(e.key)
-	var key = e.key;
-  if (key === codes[counter]) {
-	  console.log("im here",counter)
-    counter++;
-    if (counter === codes.length) {
-      alert("Hurray!");
-      counter = 0;
+    if (key === code[index]) {
+      index++;
+
+      if (index === code.length - 1) {
+        alert("YOU DID IT!");
+        index = 0;
+      }
+    } else {
+      index = 0;
     }
-	} 	else {
-		counter = 0;
-		}
-	}
-   init()
+  });
+}
