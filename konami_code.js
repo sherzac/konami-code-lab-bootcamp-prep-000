@@ -37,3 +37,30 @@ function init() {
 	  }
 	  
 	  })}
+	  
+	  
+	  let counter=0;
+function init() {
+	
+  
+document.body.addEventListener('keydown', (e) =>{	
+onKeyDownHandler(e)
+})
+
+}
+  function onKeyDownHandler(e) {
+	  
+	  console.log(e.key)
+	var key = e.key;
+  if (key === codes[counter]) {
+	  console.log("im here",counter)
+    counter++;
+    if (counter === codes.length) {
+      alert("Hurray!");
+      counter = 0;
+    }
+	} 	else {
+		counter = 0;
+		}
+	}
+   init()
