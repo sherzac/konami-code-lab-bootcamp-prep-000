@@ -11,10 +11,10 @@ const codes = [
   "a"
 ];
 
-function init() {
+/*function init() {
   // your code here
 }
-
+*/
 
 
 let index = 0;
