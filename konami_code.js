@@ -15,24 +15,26 @@ const codes = [
   // your code here
 }*/
 
-const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-
+let counter=0;
 function init() {
-  var index = 0;
-  document.addEventListener("keydown", konamiCode)
-  function konamiCode(e) {
-    const key = parseInt(e.detail || e.which);
-    if (key === code[index]) {
-      index ++;
-      if (index === code.length) {
-        alert("Wow. Such Secret. So Konami. Wow.");
-        index = 0;
-      }
-    } else {
-      index = 0;
-
-    }
-  }
-  // Write your JavaScript code inside the init() function
+document.body.addEventListener('keydown', (e) =>{	
+onKeyDownHandler(e)
+})
 
 }
+  function onKeyDownHandler(e) {
+	 
+	var key = e.key;
+	
+  if (key === codes[counter]) {
+	  console.log(key)
+    counter++;
+    if (counter === codes.length) {
+      alert("Hurray!");
+      counter = 0;
+    }
+	} 	else {
+		counter = 0;
+		}
+	}
+  
