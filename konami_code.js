@@ -11,9 +11,6 @@ const codes = [
   "a"
 ];
 
-/*function init() {
-  // your code here
-}*/
 
 let counter=0;
 function init() {
